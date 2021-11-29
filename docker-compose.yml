@@ -1,0 +1,35 @@
+version: "3"
+services:
+  back-end:
+    container_name: java
+    build: .
+    volumes:
+      - ./target/projeto-final-0.0.1-SNAPSHOT.jar:/app/server.jar
+    command:
+      - "./mvnw clean install"
+      - "java -jar server.jar"
+    ports:
+      - 1001:8080
+  front:
+    container_name: front-end
+    build: ./front
+    volumes:
+      - ./front:/home/front
+    ports:
+      - 1002:3000
+  db:
+    image: postgres
+    volumes:
+    - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ProjetoFinal
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=junior123
+    ports:
+      - "1003:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 1004:8080
