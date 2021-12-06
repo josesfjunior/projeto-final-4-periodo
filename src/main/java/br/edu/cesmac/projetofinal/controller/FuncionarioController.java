@@ -1,5 +1,6 @@
 package br.edu.cesmac.projetofinal.controller;
 
+
 import br.edu.cesmac.projetofinal.model.FuncionariosModel;
 import br.edu.cesmac.projetofinal.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,21 +30,7 @@ public class FuncionarioController {
 
     @PostMapping("/verificar")
     public boolean verificarLogin(@RequestBody FuncionariosModel funcionario) {
-//        repository.findById(funcionario.getEmail())
-//                .map(usuario -> {
-//                    if (usuario.getEmail().equals(funcionario.getEmail()) ) {
-//                        System.out.println(usuario.getEmail().equals(funcionario.getEmail()));
-//                        if (usuario.getSenha().equals(funcionario.getSenha())) {
-//                            System.out.println(usuario.getSenha().equals(funcionario.getSenha()));
-//                            return true;
-//                        } else {
-//                            return false;
-//                        }
-//                    } else {
-//                        return false;
-//                    }
-//                });
-        Optional<FuncionariosModel> f = repository.findById(funcionario.getEmail());
+        Optional<FuncionariosModel> f = repository.findById(funcionario.getId());
         if (f.isPresent()) {
             return validarLogin(f.get(), funcionario);
         }
@@ -66,5 +53,28 @@ public class FuncionarioController {
 
     ;
 
+    @PutMapping(path = "/{id}")
+    public FuncionariosModel atualizarFuncionario(@RequestBody FuncionariosModel funcionario, @PathVariable("id") Integer id) {
+        return repository.findById(id)
+                .map(usuario -> {
+                    usuario.setEmail(funcionario.getEmail());
+                    usuario.setNome(funcionario.getNome());
+                    usuario.setSenha(funcionario.getSenha());
+                    usuario.setCargo(funcionario.getCargo());
+                    return repository.save(funcionario);
+                })
+                .orElseGet(() -> {
+                    funcionario.setId(id);
+                    return repository.save(funcionario);
+                });
 
+
+    }
+
+    ;
+
+    @DeleteMapping("/{id}")
+    void deletarFuncionario(@PathVariable("id") Integer id) {
+        repository.deleteById(id);
+    }
 }

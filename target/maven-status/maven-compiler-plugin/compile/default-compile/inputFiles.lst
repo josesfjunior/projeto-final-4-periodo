@@ -2,11 +2,7 @@
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/controller/StatusController.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/repository/ClienteRepository.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/model/ClienteModel.java
-/home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/repository/ProdutoRepository.java
-/home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/model/ProdutoModel.java
-/home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/model/ServicosModel.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/controller/FuncionarioController.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/controller/ClienteController.java
-/home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/controller/ProdutoController.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/ProjetoFinalApplication.java
 /home/junior/Área de Trabalho/Faculdade/projeto-final/src/main/java/br/edu/cesmac/projetofinal/model/FuncionariosModel.java

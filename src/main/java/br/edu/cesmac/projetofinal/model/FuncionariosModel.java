@@ -9,11 +9,10 @@ import javax.persistence.*;
 @Entity(name = "Funcionarios")
 public class FuncionariosModel {
 
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
+    
     private String email;
 
     @Column

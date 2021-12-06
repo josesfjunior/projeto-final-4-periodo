@@ -10,13 +10,6 @@ services:
       - "java -jar server.jar"
     ports:
       - 1001:8080
-  front:
-    container_name: front-end
-    build: ./front
-    volumes:
-      - ./front:/home/front
-    ports:
-      - 1002:3000
   db:
     image: postgres
     volumes:

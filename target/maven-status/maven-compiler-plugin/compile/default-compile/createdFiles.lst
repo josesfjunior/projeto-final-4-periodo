@@ -1,12 +1,8 @@
-br/edu/cesmac/projetofinal/model/ServicosModel.class
-br/edu/cesmac/projetofinal/model/ProdutoModel.class
-br/edu/cesmac/projetofinal/controller/ProdutoController.class
+br/edu/cesmac/projetofinal/repository/FuncionarioRepository.class
+br/edu/cesmac/projetofinal/controller/FuncionarioController.class
+br/edu/cesmac/projetofinal/model/ClienteModel.class
+br/edu/cesmac/projetofinal/repository/ClienteRepository.class
 br/edu/cesmac/projetofinal/controller/ClienteController.class
 br/edu/cesmac/projetofinal/ProjetoFinalApplication.class
 br/edu/cesmac/projetofinal/controller/StatusController.class
 br/edu/cesmac/projetofinal/model/FuncionariosModel.class
-br/edu/cesmac/projetofinal/repository/FuncionarioRepository.class
-br/edu/cesmac/projetofinal/controller/FuncionarioController.class
-br/edu/cesmac/projetofinal/repository/ProdutoRepository.class
-br/edu/cesmac/projetofinal/model/ClienteModel.class
-br/edu/cesmac/projetofinal/repository/ClienteRepository.class
